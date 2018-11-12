@@ -177,11 +177,11 @@ while run:
     clock.tick(60)
     redrawGameWindow()
 
-    if health<=90:
+    if health<=0:
 
        # popupmsg("Score: " + str(score))
         writeTocsv(score)
-        time.sleep(5)
+        time.sleep(2)
 
         health=100
         score=0
