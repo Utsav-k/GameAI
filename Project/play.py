@@ -102,7 +102,6 @@ doom = Player(390, 20, 5)
 bullets = []
 bul = 0
 obstacles = []
-counter = 1
 
 run = True
 
@@ -179,14 +178,15 @@ while run:
     redrawGameWindow()
 
     if health<=90:
-        for bullet in bullets:
-            bullets.remove(bullet)
-        for obstacle in obstacles:
-            obstacles.remove(obstacle)
+
        # popupmsg("Score: " + str(score))
         writeTocsv(score)
         time.sleep(5)
+
         health=100
         score=0
+        bullets = []
+        bul = 0
+        obstacles = []
 
 pygame.quit()
